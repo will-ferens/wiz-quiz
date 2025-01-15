@@ -83,7 +83,7 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center justify-center overflow-hidden px-8 ">
+    <div className="min-h-screen flex flex-col items-center justify-center overflow-hidden px-8 w-full max-w-screen-md mx-auto">
       <SwitchTransition>
         <CSSTransition
           key={quizStarted ? 'quiz' : 'splash'}

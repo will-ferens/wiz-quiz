@@ -36,7 +36,6 @@ export const Quiz: React.FC<QuizProps> = ({ onSubmit }) => {
 
   return (
     <div className="relative w-full max-w-lg min-h-screen flex flex-col">
-      {/* Progress Bar (Fixed at the Top) */}
       <div className="w-full p-4 sticky top-0 z-10">
         <div className="w-full bg-gray-700 rounded-full h-2">
           <div
@@ -49,7 +48,6 @@ export const Quiz: React.FC<QuizProps> = ({ onSubmit }) => {
         </p>
       </div>
 
-      {/* Transition Group for Questions */}
       <div className="flex-1 flex items-center justify-center">
         <TransitionGroup className="relative w-full h-full">
           <CSSTransition
@@ -71,7 +69,7 @@ export const Quiz: React.FC<QuizProps> = ({ onSubmit }) => {
                       checked={
                         answers[questions[currentQuestion].id] === option.value
                       }
-                      onChange={() => handleOptionSelect(option.value)} // Save selection
+                      onChange={() => handleOptionSelect(option.value)}
                       className="mr-2"
                     />
                     {option.label}

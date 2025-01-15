@@ -33,13 +33,16 @@ export const Results: React.FC<{ score: Score }> = ({ score }) => {
     setChosenClass(wizardClasses.find((w) => w.name === wizardClass));
   };
 
+  const labels = sortedScores.map(([name]) => name);
+  const data = sortedScores.map(([, value]) => value);
+
   const chartData = {
-    labels: Object.keys(score),
+    labels,
     datasets: [
       {
         label: 'Wizard Class Scores',
-        data: Object.values(score),
-        backgroundColor: Object.keys(score).map((wizardClass) =>
+        data,
+        backgroundColor: labels.map((wizardClass) =>
           wizardClass === chosenClass?.name ? '#2563EB' : '#3B82F6'
         ),
       },
@@ -53,30 +56,29 @@ export const Results: React.FC<{ score: Score }> = ({ score }) => {
         display: false,
       },
       title: {
-        display: false,
-        text: 'Wizard Class Scores',
+        display: true,
+        text: 'Your Wizard Score',
       },
     },
     scales: {
       x: {
         title: {
           display: false,
-          text: 'Classes',
+          text: 'Points',
         },
+        beginAtZero: true,
       },
       y: {
         title: {
           display: false,
-          text: 'Score',
+          text: 'Classes',
         },
-        beginAtZero: true,
       },
     },
   };
 
   return (
     <div className="flex flex-col items-center justify-center space-y-8">
-      {/* Lead Wizard Class */}
       <div className="text-center">
         <h1 className="text-4xl font-bold text-blue-lagoon-500">
           {chosenClass?.name}
@@ -91,18 +93,14 @@ export const Results: React.FC<{ score: Score }> = ({ score }) => {
           {chosenClass?.symbols}
         </p>
       </div>
-
-      {/* Bar Chart */}
       <div className="w-full max-w-3xl">
         <Bar data={chartData} options={chartOptions} />
       </div>
-
-      {/* Links to Other Classes */}
       <div className="w-full max-w-3xl">
-        <h2 className="text-2xl font-bold mb-4 text-gray-200">
+        <h2 className="text-2xl font-bold mb-4 text-gray-200 text-center">
           Explore Other Wizard Classes
         </h2>
-        <ul className="grid grid-cols-2 gap-4">
+        <ul className="grid grid-cols-2 text-center gap-4">
           {Object.keys(score).map((wizardClass) => (
             <li key={wizardClass}>
               <a

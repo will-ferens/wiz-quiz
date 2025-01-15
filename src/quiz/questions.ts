@@ -15,7 +15,7 @@ export type Question = {
 export const questions = [
   {
     id: 1,
-    question: 'How do you feel about baubles?',
+    question: 'How do you feel about baubles/trinkets?',
     options: [
       {
         value: '1',
@@ -488,7 +488,7 @@ export const questions = [
       {
         value: '1',
         label:
-          'Conspire with him to overtake the doddering old man with the help of the artifact, then disposing of the useful fool. I will therefore take my rightful place as the most powerful wizard in the realm!',
+          'Conspire with him to overtake the doddering old man with the help of the artifact, then dispose of the useful fool. I will take my rightful place as the most powerful wizard in the realm!',
         aligned: ['Necromancer', 'Elementalist', 'Illusionist', 'Chronomancer'],
         neutral: ['Summoner', 'Sigilist', 'Witch'],
         opposing: ['Soothsayer', 'Enchanter', 'Thaumaturge'],
@@ -504,7 +504,7 @@ export const questions = [
       {
         value: '3',
         label:
-          'Nothing; I have seen many ways this ends, none of them good for my dearest enemy',
+          'Nothing; I have seen the many ways this ends, none of them good for my dearest enemy',
         aligned: ['Chronomancer', 'Soothsayer'],
         neutral: [
           'Elementalist',
@@ -898,6 +898,154 @@ export const questions = [
         aligned: ['Chronomancer', 'Summoner', 'Thaumaturge', 'Illusionist'],
         neutral: ['Elementalist', 'Enchanter', 'Sigilist', 'Necromancer'],
         opposing: ['Witch', 'Soothsayer'],
+      },
+    ],
+  },
+  {
+    id: 13,
+    question:
+      'After a long day of adventuring, you return home to a feast. What do you prefer to eat?',
+    options: [
+      {
+        value: '1',
+        label: 'A simple and hearty stew, shared with friends around the fire',
+        aligned: ['Enchanter', 'Thaumaturge'],
+        neutral: [
+          'Elementalist',
+          'Summoner',
+          'Illusionist',
+          'Sigilist',
+          'Witch',
+          'Chronomancer',
+          'Soothsayer',
+        ],
+        opposing: ['Necromancer'],
+      },
+      {
+        value: '2',
+        label:
+          "The realm's finest 6 course meal, replete with imported spices and exotic produce",
+        aligned: ['Elementalist', 'Chronomancer', 'Illusionist'],
+        neutral: ['Summoner', 'Enchanter', 'Sigilist', 'Necromancer'],
+        opposing: ['Thaumaturge', 'Sigilist', 'Witch', 'Soothsayer'],
+      },
+      {
+        value: '3',
+        label: 'Questionable meat, right off the bone',
+        aligned: ['Necromancer', 'Witch'],
+        neutral: [],
+        opposing: [
+          'Thaumaturge',
+          'Elementalist',
+          'Summoner',
+          'Illusionist',
+          'Enchanter',
+          'Sigilist',
+          'Soothsayer',
+          'Chronomancer',
+        ],
+      },
+      {
+        value: '4',
+        label: 'Whatever was foraged that day',
+        aligned: ['Witch', 'Thaumaturge'],
+        neutral: [
+          'Summoner',
+          'Illusionist',
+          'Sigilist',
+          'Chronomancer',
+          'Enchanter',
+          'Necromancer',
+        ],
+        opposing: ['Elementalist', 'Chronomancer'],
+      },
+      {
+        value: '5',
+        label: 'The spiciest chili imaginable',
+        aligned: ['Illusionist', 'Summoner'],
+        neutral: [
+          'Elementalist',
+          'Enchanter',
+          'Sigilist',
+          'Witch',
+          'Soothsayer',
+          'Necromancer',
+        ],
+        opposing: ['Sigilist', 'Thaumaturge'],
+      },
+    ],
+  },
+  {
+    id: 14,
+    question: 'Finally, what about a beverage to go along with it?',
+    options: [
+      {
+        value: '1',
+        label: 'Wine, aged to perfection',
+        aligned: ['Chronomancer', 'Elementalist'],
+        neutral: [
+          'Summoner',
+          'Illusionist',
+          'Thaumaturge',
+          'Soothsayer',
+          'Enchanter',
+          'Sigilist',
+        ],
+        opposing: ['Necromancer', 'Witch'],
+      },
+      {
+        value: '2',
+        label: 'Beer! And lots of it!',
+        aligned: ['Enchanter'],
+        neutral: [
+          'Summoner',
+          'Illusionist',
+          'Thaumaturge',
+          'Chronomancer',
+          'Elementalist',
+        ],
+        opposing: ['Necromancer', 'Soothsayer', 'Witch', 'Sigilist'],
+      },
+      {
+        value: '3',
+        label: 'Something strong, that will put hair on your chest',
+        aligned: ['Summoner', 'Illusionist', 'Enchanter'],
+        neutral: [
+          'Necromancer',
+          'Soothsayer',
+          'Witch',
+          'Thaumaturge',
+          'Chronomancer',
+          'Elementalist',
+        ],
+        opposing: ['Sigilist'],
+      },
+      {
+        value: '4',
+        label: 'The blood of my enemies',
+        aligned: ['Summoner', 'Necromancer'],
+        neutral: ['Witch', 'Elementalist'],
+        opposing: [
+          'Soothsayer',
+          'Sigilist',
+          'Thaumaturge',
+          'Chronomancer',
+          'Illusionist',
+          'Enchanter',
+        ],
+      },
+      {
+        value: '5',
+        label: "I'll stick to water, thanks",
+        aligned: ['Thaumaturge', 'Soothsayer', 'Sigilist'],
+        neutral: [
+          'Witch',
+          'Illusionist',
+          'Necromancer',
+          'Elementalist',
+          'Summoner',
+        ],
+        opposing: ['Chronomancer', 'Enchanter'],
       },
     ],
   },

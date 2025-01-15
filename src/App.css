@@ -1,4 +1,6 @@
-/* Splash and Quiz fade transition */
+/* =======ANIMATIONS====== */
+
+/*SPLASH*/
 .fade-enter {
   opacity: 0;
 }
@@ -14,7 +16,7 @@
   transition: opacity 500ms ease-in-out;
 }
 
-/* Slide animation for questions */
+/*QUESTIONS*/
 .slide-enter {
   transform: translateX(100%);
   opacity: 0;
@@ -39,6 +41,7 @@
   font-size: 1.5rem;
 }
 
+/*RESULTS*/
 .spinner {
   margin: 0 auto 20px;
   width: 50px;
